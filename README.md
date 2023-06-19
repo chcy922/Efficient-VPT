@@ -12,13 +12,11 @@ This repository is forked from offiacl repository of contains the official PyTor
 
 - `src/data`: loading and setup input datasets. The `src/data/vtab_datasets` are borrowed from 
 
-  [VTAB github repo](https://github.com/google-research/task_adaptation/tree/master/task_adaptation/data).
-
 
 - `src/engine`: main training and eval actions here.
 
 - `src/models`: handles backbone archs and heads for different fine-tuning protocols 
-
+    * 👉`src/models/vit_backbones`: <u>a folder containing vit.py in which applied flash attention and gradient checkpointing could be find.</u>
     * 👉`src/models/vit_prompt`: <u>a folder contains the same backbones in `vit_backbones` folder,</u> specified for VPT. This folder should contain the same file names as those in  `vit_backbones`
 
     * 👉 `src/models/vit_models.py`: <u>main model for transformer-based models</u> ❗️Note❗️: Current version only support ViT, Swin and ViT with mae, moco-v3
@@ -43,3 +41,22 @@ This repository is forked from offiacl repository of contains the official PyTor
 
 Download and place the pre-trained Transformer-based backbones to `params`. Note that you also need to rename the downloaded ViT-B/16 ckpt from `ViT-B_16.npz` to `sup-ViT-B.npz`.
 
+<table><tbody>
+<!-- START TABLE -->
+<!-- TABLE HEADER -->
+<th valign="bottom">Pre-trained Backbone</th>
+<th valign="bottom">Pre-trained Objective</th>
+<th valign="bottom">Link</th>
+<th valign="bottom">md5sum</th>
+<!-- TABLE BODY -->
+<tr><td align="left">ViT-B/16</td>
+<td align="center">Supervised</td>
+<td align="center"><a href="https://storage.googleapis.com/vit_models/imagenet21k/ViT-B_16.npz">link</a></td>
+<td align="center"><tt>d9715d</tt></td>
+</tr>
+<tr><td align="left">ViT-L/16</td>
+<td align="center">Supervised</td>
+<td align="center"><a href="https://storage.googleapis.com/vit_models/imagenet21k/ViT-L_16.npz">link</a></td>
+<td align="center"><tt>d9715d</tt></td>
+</tr>
+</tbody></table>

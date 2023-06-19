@@ -60,3 +60,9 @@ Download and place the pre-trained Transformer-based backbones to `params`. Note
 <td align="center"><tt>d9715d</tt></td>
 </tr>
 </tbody></table>
+
+### Run experiments
+If you want to run with Flash Attention for ViT-B/16 on CUB dataset with 100 prompt tokens and image size 224, execute
+```
+bash run.sh sup_vitb16 cub 224 100 True False
+```
